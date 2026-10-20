@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import CallBlock from "../components/CallBlock.astro";
 import { business, services, areas } from "../data/business";
-import { hero, gallery } from "../data/gallery";
+import { hero, gallery, beforeAfter } from "../data/gallery";
 
 const { landline, freephone } = business.phones;
 
@@ -107,13 +107,30 @@ const websiteSchema = { "@context": "https://schema.org", "@type": "WebSite", na
       <div class="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 class="text-4xl text-moss text-center">Some of our recent work</h2>
         <p class="mt-4 text-center text-stone-600 max-w-2xl mx-auto">Every photo here is one of our own jobs.</p>
-        <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {gallery.map((p) => (
             <figure class="overflow-hidden rounded-lg bg-stone-100">
               <img src={p.src} alt={p.alt} width={p.width} height={p.height} loading="lazy" class="aspect-[4/3] w-full object-cover" />
               {p.caption && <figcaption class="px-4 py-3 text-sm text-stone-700">{p.caption}</figcaption>}
             </figure>
           ))}
+        </div>
+
+        <div class="mt-16 grid gap-8 md:grid-cols-2 items-center">
+          <div>
+            <h3 class="font-serif text-3xl text-moss">Before &amp; after: a tired gravel drive</h3>
+            <p class="mt-4 text-stone-700 leading-relaxed">
+              Before, the gravel was thin and weedy with a broken edge onto the pavement. After, it's a fresh gravel drive held in by a red block paved strip across the front, so the stones stay where they belong.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            {[["Before", beforeAfter.before], ["After", beforeAfter.after]].map(([label, p]: any) => (
+              <figure class="overflow-hidden rounded-lg bg-stone-100">
+                <img src={p.src} alt={p.alt} width={p.width} height={p.height} loading="lazy" class="w-full h-auto" />
+                <figcaption class="px-3 py-2 text-sm font-bold text-moss-dark">{label}</figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -21,31 +21,31 @@ export const services = [
     slug: "block-paving",
     name: "Block Paving Driveways",
     blurb:
-      "Proper dig-out, compacted MOT Type 1, sharp sand bed and a kiln-dried sand finish. Laid in herringbone, basketweave or a border and centre to suit the house.",
+      "Our main line of work. Proper dig-out, compacted sub-base, sharp sand bed and a kiln-dried sand finish, laid in herringbone or straight bond with borders and feature patterns if you want them.",
   },
   {
     slug: "patios",
     name: "Patios",
     blurb:
-      "Indian sandstone, porcelain and riven slabs on a full mortar bed, laid to a fall so rain runs away from the house rather than towards it.",
+      "Riven slate, sandstone and porcelain slabs on a full mortar bed, laid to a fall so rain runs away from the house rather than towards it.",
   },
   {
-    slug: "resin-tarmac",
-    name: "Resin & Tarmac",
+    slug: "tarmac",
+    name: "Tarmac Driveways",
     blurb:
-      "Resin bound and tarmac surfaces for driveways that need to be smooth, quick to sweep and kind to the drains.",
+      "Tarmac laid hot and rolled over a solid base, with neat edging so the sides don't crumble. A hard-wearing drive for a sensible price.",
   },
   {
-    slug: "kerbs-edging",
-    name: "Kerbs, Edging & Steps",
+    slug: "gravel",
+    name: "Gravel Driveways",
     blurb:
-      "Dropped kerbs, edging, garden steps and walling. The finishing pieces that stop a drive spreading and make the whole job look tidy.",
+      "Fresh gravel over a proper base, held in with block or brick edging so it stays on the drive and off the pavement.",
   },
   {
-    slug: "drainage",
-    name: "Drainage",
+    slug: "drainage-edging",
+    name: "Drainage, Edging & Steps",
     blurb:
-      "Channel drains, soakaways and permeable layouts, so a new front drive meets the rules on surface water without a planning application.",
+      "Channel drains, soakaways, kerbs and front steps. The pieces that keep water off the house and stop a drive spreading.",
   },
   {
     slug: "repairs",
