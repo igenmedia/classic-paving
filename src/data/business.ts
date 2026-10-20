@@ -1,5 +1,5 @@
 // Single source of truth for Classic Paving's details.
-// Still to come from the client: email, trading address, domain, socials, GBP.
+// Still to come from the client: email, trading address, socials, GBP.
 
 export const business = {
   name: "Classic Paving",
