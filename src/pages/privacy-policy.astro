@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { business } from "../data/business";
+
+const { landline } = business.phones;
+---
+
+<Layout title="Privacy Policy | Classic Paving" description="How Classic Paving handles the personal details you give us." noindex>
+  <section class="mx-auto max-w-3xl px-4 sm:px-6 py-16">
+    <h1 class="text-5xl text-moss"><a href="/">Privacy Policy</a></h1>
+    <div class="mt-8 space-y-5 text-stone-700 leading-relaxed">
+      <h2 class="text-2xl text-ink">Who we are</h2>
+      <p>{business.name} is the data controller for any personal information you give us. You can reach us on <a class="text-moss underline" href={`tel:${landline.tel}`}>{landline.display}</a>.</p>
+
+      <h2 class="text-2xl text-ink">What we collect</h2>
+      <p>When you call, text or otherwise contact us we may keep your name, phone number, email address, the address of the property and details of the work you're interested in, along with any photos you send.</p>
+
+      <h2 class="text-2xl text-ink">How we use it</h2>
+      <p>Only to respond to your enquiry, arrange a site visit, prepare a quote and, if you go ahead, carry out and invoice the work. We rely on our legitimate interest in answering enquiries and, once you book, on the contract between us.</p>
+
+      <h2 class="text-2xl text-ink">Sharing and storage</h2>
+      <p>We don't sell your details or pass them to anyone for marketing. We may share what's needed with suppliers or our accountant to complete a job. We keep enquiry details for up to two years and job records for as long as the law requires.</p>
+
+      <h2 class="text-2xl text-ink">Your rights</h2>
+      <p>Under UK GDPR you can ask to see the information we hold about you, have it corrected or deleted, or object to how we use it. Call us to make a request. If you're unhappy with how we've handled your data you can complain to the <a class="text-moss underline" href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noopener noreferrer">Information Commissioner's Office</a>.</p>
+
+      <h2 class="text-2xl text-ink">This website</h2>
+      <p>This site doesn't use tracking or advertising cookies.</p>
+    </div>
+  </section>
+</Layout>

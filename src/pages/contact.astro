@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CallBlock from "../components/CallBlock.astro";
+import { business } from "../data/business";
+
+const { mobile } = business.phones;
+---
+
+<Layout
+  title="Contact Classic Paving | Driveways & Patios Oxford"
+  description="Call Classic Paving on 01865 389180, freephone 0800 191 0611 or 07362 749788 for a free driveway or patio quote in Oxford and the surrounding area."
+>
+  <section class="bg-sand-light py-16">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 text-center">
+      <h1 class="text-5xl text-moss"><a href="/">Contact Classic Paving In Oxford</a></h1>
+      <h2 class="mt-4 text-2xl text-ink">Thinking about a new drive or patio?</h2>
+      <h3 class="mt-3 text-lg text-stone-700 font-normal">Free site visits and written quotes across Oxford and up to 40 miles out</h3>
+    </div>
+    <div class="mt-10 max-w-2xl mx-auto px-4 sm:px-6">
+      <CallBlock heading="Request a free quote" />
+      <p class="mt-6 text-center text-stone-700">
+        Prefer to text? Send a couple of photos and your postcode to <a class="font-bold text-moss underline" href={`sms:${mobile.tel}`}>{mobile.display}</a> and John will get back to you.
+      </p>
+    </div>
+  </section>
+</Layout>

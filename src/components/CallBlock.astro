@@ -1,0 +1,30 @@
+---
+import { business } from "../data/business";
+
+interface Props {
+  heading?: string;
+}
+
+const { heading = "Call for a free quote" } = Astro.props;
+const { landline, freephone, mobile } = business.phones;
+const lines = [
+  { label: "Oxford office", ...landline },
+  { label: "Freephone", ...freephone },
+  { label: "Mobile (calls & texts)", ...mobile },
+];
+---
+
+<div class="rounded-xl bg-sand-light border border-sand p-6 sm:p-8">
+  <h3 class="font-serif text-3xl text-moss">{heading}</h3>
+  <p class="mt-2 text-stone-700">Ask for John. If he's on a job, leave a message or send a text and he'll get back to you.</p>
+  <ul class="mt-6 space-y-3">
+    {lines.map((l) => (
+      <li>
+        <a href={`tel:${l.tel}`} class="flex items-center justify-between gap-4 rounded-lg bg-white border border-stone-200 px-5 py-4 hover:border-moss">
+          <span class="text-sm font-semibold text-stone-600">{l.label}</span>
+          <span class="text-lg font-bold text-moss">{l.display}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>
