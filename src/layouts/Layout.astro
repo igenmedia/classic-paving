@@ -26,6 +26,7 @@ const localBusiness = {
   url: business.url,
   description: `Driveways, patios and block paving across ${business.base} and roughly ${business.radius} around it.`,
   telephone: landline.tel,
+  email: business.email,
   logo: { "@type": "ImageObject", url: business.url + "/favicon.svg" },
   ...(hero ? { image: business.url + hero.src } : {}),
   address: {
@@ -124,11 +125,12 @@ const nav = [
           </p>
         </div>
         <div>
-          <h3 class="text-sm font-bold uppercase tracking-wider text-white">Call us</h3>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-white">Get in touch</h3>
           <ul class="mt-4 space-y-2 text-sm">
             <li>Oxford: <a class="text-brass hover:text-white" href={`tel:${landline.tel}`}>{landline.display}</a></li>
             <li>Freephone: <a class="text-brass hover:text-white" href={`tel:${freephone.tel}`}>{freephone.display}</a></li>
             <li>Mobile: <a class="text-brass hover:text-white" href={`tel:${mobile.tel}`}>{mobile.display}</a></li>
+            <li>Email: <a class="text-brass hover:text-white break-all" href={`mailto:${business.email}`}>{business.email}</a></li>
           </ul>
         </div>
         <div>

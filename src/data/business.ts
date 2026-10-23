@@ -1,10 +1,11 @@
 // Single source of truth for Classic Paving's details.
-// Still to come from the client: email, trading address, socials, GBP.
+// Still to come from the client: trading address, socials, GBP.
 
 export const business = {
   name: "Classic Paving",
   owner: "John",
   url: "https://www.classicpavingoxford.co.uk",
+  email: "classpaving1@mail.com",
   base: "Oxford",
   radius: "30-40 miles",
   phones: {
